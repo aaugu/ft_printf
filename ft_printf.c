@@ -6,18 +6,11 @@
 /*   By: aaugu <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 12:57:02 by aaugu             #+#    #+#             */
-/*   Updated: 2022/12/06 15:23:52 by aaugu            ###   ########.fr       */
+/*   Updated: 2022/12/08 10:33:54 by aaugu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
-#include <stdlib.h>
-
-char	*ft_strdup(const char *s1);
-size_t	ft_strlen(const char *s);
-void	ft_putnbr_fd_base(int n, int fd, int base);
-void	ft_putchar_fd(char c, int fd);
+#include "libftprintf.h"
 
 int	main(void)
 {

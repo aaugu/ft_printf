@@ -1,16 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   libftprintf.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaugu <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/06 09:48:52 by aaugu             #+#    #+#             */
-/*   Updated: 2022/12/06 10:32:26 by aaugu            ###   ########.fr       */
+/*   Created: 2022/12/08 10:32:03 by aaugu             #+#    #+#             */
+/*   Updated: 2022/12/08 10:36:15 by aaugu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+
+#ifndef LIBFTPRINTF_H
+# define LIBFTPRINTF_H
+
+# include "libft/libft.h"
+
+void	ft_putnbr_base(int n, int base, char m);
+void	ft_putchar_base(int nb, int base, char m);
 
 #endif
