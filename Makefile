@@ -6,7 +6,7 @@
 #    By: aaugu <marvin@42lausanne.ch>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/10 12:56:54 by aaugu             #+#    #+#              #
-#    Updated: 2022/12/09 16:19:03 by aaugu            ###   ########.fr        #
+#    Updated: 2022/12/09 16:25:17 by aaugu            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,8 +23,7 @@ LIBFT = ${LIBFT_PATH}/libft.a
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 AR = ar rc
-RM = rm
-RF = -rf
+RM = rm -rf
 
 $(OBJ_DIR)/%.o:	%.c
 				$(CC) $(CFLAGS) -c $< -o $@
@@ -45,7 +44,7 @@ ${OBJ_DIR}:
 
 clean:
 				make -C ${LIBFT_PATH} clean
-				${RM} ${RF} ${OBJ_DIR}
+				${RM} ${OBJ_DIR}
 
 fclean: 		clean
 				make -C $(LIBFT_PATH) fclean

@@ -6,7 +6,7 @@
 #    By: aaugu <marvin@42lausanne.ch>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/24 12:03:36 by aaugu             #+#    #+#              #
-#    Updated: 2022/12/09 16:17:28 by aaugu            ###   ########.fr        #
+#    Updated: 2022/12/09 16:25:33 by aaugu            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,8 +27,7 @@ OBJS = ${SRCS:%.c=${OBJ_DIR}/%.o}
 GCC = gcc
 CFLAGS = -Wall -Wextra -Werror
 AR = ar rc
-RM = rm
-RF = -rf
+RM = rm -rf
 
 $(OBJ_DIR)/%.o:	%.c
 				$(CC) $(CFLAGS) -c $< -o $@
@@ -44,7 +43,7 @@ ${OBJ_DIR}:
 				mkdir ${OBJ_DIR}
 
 clean:
-				${RM} ${RF} ${OBJ_DIR}
+				${RM} ${OBJ_DIR}
 
 fclean: 		clean
 				${RM} ${NAME}
