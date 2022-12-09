@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaugu <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/10 12:57:02 by aaugu             #+#    #+#             */
-/*   Updated: 2022/12/09 14:29:53 by aaugu            ###   ########.fr       */
+/*   Created: 2022/10/25 12:53:35 by aaugu             #+#    #+#             */
+/*   Updated: 2022/11/09 17:07:09 by aaugu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "libft.h"
 
-int	main(void)
+/*
+Outputs the string ’s’ to the given file descriptor followed by a newline.
+
+s s: The string to output.
+fd: The file descriptor on which to write.
+*/
+
+void	ft_putendl_fd(char *s, int fd)
 {
-	char			c = 'c';
-	char*			s = "Hello World";
-	int				d = -142;
-	int				i = 142;
-	unsigned int	u = -42;
-
-	printf("c : %15c\n", c);
-	printf("s : %15s\n", s);
-	printf("p : %15p\n", s);
-	printf("d : %d\n", d);
-	printf("i : % -15i\n", i);
-	printf("u : %15u\n", u);
-	printf("x : %x\n", d);
-	printf("X : %15X\n", i);
-	printf("%#%\n");
-	return (0);
+	while (*s)
+	{
+		write(fd, s, 1);
+		s++;
+	}
+	write(fd, "\n", 1);
 }

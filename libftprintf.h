@@ -1,33 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   libftprintf.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaugu <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/10 12:57:02 by aaugu             #+#    #+#             */
-/*   Updated: 2022/12/09 14:29:53 by aaugu            ###   ########.fr       */
+/*   Created: 2022/12/08 10:32:03 by aaugu             #+#    #+#             */
+/*   Updated: 2022/12/08 10:36:15 by aaugu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
 
-int	main(void)
-{
-	char			c = 'c';
-	char*			s = "Hello World";
-	int				d = -142;
-	int				i = 142;
-	unsigned int	u = -42;
+#ifndef LIBFTPRINTF_H
+# define LIBFTPRINTF_H
 
-	printf("c : %15c\n", c);
-	printf("s : %15s\n", s);
-	printf("p : %15p\n", s);
-	printf("d : %d\n", d);
-	printf("i : % -15i\n", i);
-	printf("u : %15u\n", u);
-	printf("x : %x\n", d);
-	printf("X : %15X\n", i);
-	printf("%#%\n");
-	return (0);
-}
+# include "libft/libft.h"
+
+void	ft_putnbr_base(int n, int base, char m);
+void	ft_putchar_base(int nb, int base, char m);
+
+#endif

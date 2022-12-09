@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaugu <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/10 12:57:02 by aaugu             #+#    #+#             */
-/*   Updated: 2022/12/09 14:29:53 by aaugu            ###   ########.fr       */
+/*   Created: 2022/10/24 12:02:03 by aaugu             #+#    #+#             */
+/*   Updated: 2022/11/08 11:46:23 by aaugu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "libft.h"
 
-int	main(void)
+/*
+The isalnum() function tests for any character for which isalpha(3) or
+isdigit(3) is true.  The value of the argument must be representable as an
+unsigned char or the value of EOF. 
+Returns zero if the character tests false and returns non-zero if the character 
+tests true.
+*/
+
+int	ft_isalnum(int c)
 {
-	char			c = 'c';
-	char*			s = "Hello World";
-	int				d = -142;
-	int				i = 142;
-	unsigned int	u = -42;
-
-	printf("c : %15c\n", c);
-	printf("s : %15s\n", s);
-	printf("p : %15p\n", s);
-	printf("d : %d\n", d);
-	printf("i : % -15i\n", i);
-	printf("u : %15u\n", u);
-	printf("x : %x\n", d);
-	printf("X : %15X\n", i);
-	printf("%#%\n");
+	if (ft_isalpha(c) || ft_isdigit(c))
+		return (1);
 	return (0);
 }

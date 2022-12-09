@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaugu <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/10 12:57:02 by aaugu             #+#    #+#             */
-/*   Updated: 2022/12/09 14:29:53 by aaugu            ###   ########.fr       */
+/*   Created: 2022/10/27 10:19:34 by aaugu             #+#    #+#             */
+/*   Updated: 2022/11/08 16:21:37 by aaugu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "libft.h"
 
-int	main(void)
+/*
+The strrchr() function is identical to strchr(), except it locates the last
+occurrence of c. Returns a pointer to the located character, or NULL if the 
+character does not appear in the string.
+*/
+
+char	*ft_strrchr(const char *s, int c)
 {
-	char			c = 'c';
-	char*			s = "Hello World";
-	int				d = -142;
-	int				i = 142;
-	unsigned int	u = -42;
+	int	len;
 
-	printf("c : %15c\n", c);
-	printf("s : %15s\n", s);
-	printf("p : %15p\n", s);
-	printf("d : %d\n", d);
-	printf("i : % -15i\n", i);
-	printf("u : %15u\n", u);
-	printf("x : %x\n", d);
-	printf("X : %15X\n", i);
-	printf("%#%\n");
+	len = ft_strlen(s);
+	while (len >= 0)
+	{
+		if (s[len] == (char)c)
+			return ((char *)&s[len]);
+		len--;
+	}
 	return (0);
 }

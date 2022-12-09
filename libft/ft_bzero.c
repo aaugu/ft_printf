@@ -1,33 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaugu <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/10 12:57:02 by aaugu             #+#    #+#             */
-/*   Updated: 2022/12/09 14:29:53 by aaugu            ###   ########.fr       */
+/*   Created: 2022/10/27 10:24:51 by aaugu             #+#    #+#             */
+/*   Updated: 2022/11/09 17:28:42 by aaugu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "libft.h"
 
-int	main(void)
+/*
+The bzero() function writes n zeroed bytes to the string s. If n is zero,
+bzero() does nothing.
+*/
+
+void	ft_bzero(void *s, size_t n)
 {
-	char			c = 'c';
-	char*			s = "Hello World";
-	int				d = -142;
-	int				i = 142;
-	unsigned int	u = -42;
+	size_t	i;
 
-	printf("c : %15c\n", c);
-	printf("s : %15s\n", s);
-	printf("p : %15p\n", s);
-	printf("d : %d\n", d);
-	printf("i : % -15i\n", i);
-	printf("u : %15u\n", u);
-	printf("x : %x\n", d);
-	printf("X : %15X\n", i);
-	printf("%#%\n");
-	return (0);
+	i = 0;
+	while (i < n)
+		((char *)s)[i++] = 0;
 }
