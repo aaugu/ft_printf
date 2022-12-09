@@ -6,7 +6,7 @@
 #    By: aaugu <marvin@42lausanne.ch>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/10 12:56:54 by aaugu             #+#    #+#              #
-#    Updated: 2022/12/09 14:29:05 by aaugu            ###   ########.fr        #
+#    Updated: 2022/12/09 16:19:03 by aaugu            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,38 +14,43 @@ NAME = libftprintf.a
 
 SRCS = ft_printf.c ft_printf_utils.c
 
-OBJS = ${SRCS:.c=.o}
+OBJ_DIR = objs
+OBJS = ${SRCS:%.c=${OBJ_DIR}/%.o}
 
 LIBFT_PATH = ./libft
 LIBFT = ${LIBFT_PATH}/libft.a
 
-GCC = gcc
+CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 AR = ar rc
-RM = rm -f
+RM = rm
+RF = -rf
 
-.c.o:
-			${GCC} ${CFLAGS} -c $< -o ${<:.c=.o}
+$(OBJ_DIR)/%.o:	%.c
+				$(CC) $(CFLAGS) -c $< -o $@
 
-all: 		${NAME}
+all:			${NAME}
 
-bonus:		all
+bonus:			all
 
-${NAME}:	$(LIBFT) $(OBJ_DIR) $(OBJS)
-			cp	$(LIBFT) $(NAME)
-			$(AR) $(NAME) $(OBJS)
+${NAME}:		$(LIBFT) ${OBJ_DIR} $(OBJS)
+				cp	$(LIBFT) $(NAME)
+				$(AR) $(NAME) $(OBJS)
 
 ${LIBFT}:
-			make -C $(LIBFT_PATH) all
+				make -C $(LIBFT_PATH) all
+
+${OBJ_DIR}:
+				mkdir ${OBJ_DIR}
 
 clean:
-			make -C ${LIBFT_PATH} clean
-			${RM} ${OBJS}
+				make -C ${LIBFT_PATH} clean
+				${RM} ${RF} ${OBJ_DIR}
 
-fclean: 	clean
-			make -C $(LIBFT_PATH) fclean
-			${RM} ${NAME}
+fclean: 		clean
+				make -C $(LIBFT_PATH) fclean
+				${RM} ${NAME}
 
-re: 		fclean all
+re: 			fclean all
 
-.PHONY:		all clean fclean re
+.PHONY:			all bonus clean fclean re

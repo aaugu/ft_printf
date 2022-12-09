@@ -6,11 +6,11 @@
 /*   By: aaugu <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 09:42:50 by aaugu             #+#    #+#             */
-/*   Updated: 2022/12/08 10:38:17 by aaugu            ###   ########.fr       */
+/*   Updated: 2022/12/09 16:01:02 by aaugu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 void	ft_putnbr_base(int n, int base, char m)
 {
@@ -52,8 +52,8 @@ void	ft_putchar_base(int nb, int base, char m)
 	}
 }
 
-// int	main(void)
-// {
-// 	ft_putnbr_base(42, 16, 'm');
-// 	return (0);
-// }
+int	main(void)
+{
+	ft_putnbr_base(42, 16, 'm');
+	return (0);
+}
