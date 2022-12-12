@@ -6,28 +6,36 @@
 /*   By: aaugu <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 12:57:02 by aaugu             #+#    #+#             */
-/*   Updated: 2022/12/09 15:02:00 by aaugu            ###   ########.fr       */
+/*   Updated: 2022/12/12 13:54:17 by aaugu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	main(void)
-{
-	char			c = 'c';
-	char*			s = "Hello World";
-	int				d = -142;
-	int				i = 142;
-	unsigned int	u = -42;
+/*
+The printf() function write output to stdout, the standard output stream.
+Returns the number of characters printed.
+*/
 
-	printf("c : %15c\n", c);
-	printf("s : %15s\n", s);
-	printf("p : %15p\n", s);
-	printf("d : %d\n", d);
-	printf("i : % -15i\n", i);
-	printf("u : %15u\n", u);
-	printf("x : %x\n", d);
-	printf("X : %15X\n", i+1);
-	//printf("%#%\n");
-	return (0);
+int	parse_args(const char *input, va_list args);
+
+int	ft_printf(const char *input, ...)
+{
+	va_list	args;
+	int		count;
+
+	if (!input)
+		return (0);
+	va_start(args, input);
+	count = parse_args(input, args);
+	va_end(args);
+	return (count);
+}
+
+int	parse_args(const char *input, va_list args)
+{
+	t_flags	flags;
+	int		count;
+
+	flags = init_flags(flags);
 }
