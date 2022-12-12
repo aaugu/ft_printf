@@ -6,8 +6,13 @@
 /*   By: aaugu <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 09:42:50 by aaugu             #+#    #+#             */
-/*   Updated: 2022/12/12 09:24:19 by aaugu            ###   ########.fr       */
+/*   Updated: 2022/12/12 14:50:10 by aaugu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+
+t_bool	is_specifier(char c);
+t_bool	is_format(char c);
+t_bool	is_flag(char c);
