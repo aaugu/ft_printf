@@ -6,7 +6,7 @@
 /*   By: aaugu <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 10:32:03 by aaugu             #+#    #+#             */
-/*   Updated: 2022/12/13 11:06:31 by aaugu            ###   ########.fr       */
+/*   Updated: 2022/12/13 16:24:02 by aaugu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 typedef int	t_bool;
 
-/* ---------------	FLAGS	--------------- */
+/* ---------------	SPECIFIERS	--------------- */
 typedef struct s_specs
 {
 	char	format;
@@ -30,19 +30,14 @@ typedef struct s_specs
 	t_bool	plus;
 }				t_specs;
 
-t_specs	init_specifiers(void);
-
-t_specs	min_width_flag(t_specs specs);
-t_specs	precision_flag(t_specs specs, va_list args);
-
-t_specs	print_padding(t_specs specs);
+t_specs	ft_init_specifiers(void);
 
 /* ---------------	PRINTF	--------------- */
 int		ft_printf(const char *input, ...);
 
 /* ---------------	PRINTF UTILS	--------------- */
-int		is_flag(char c);
-int		is_format(char c);
+int		ft_is_flag(char c);
+int		ft_is_format(char c);
 
 /* ---------------	`C`HAR	--------------- */
 int		print_c(char c);
