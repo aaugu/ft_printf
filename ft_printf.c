@@ -3,22 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaugu <marvin@42lausanne.ch>               +#+  +:+       +#+        */
+/*   By: aaugu <aaugu@student.42lausanne.ch>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/10 12:57:02 by aaugu             #+#    #+#             */
-/*   Updated: 2022/12/13 11:27:32 by aaugu            ###   ########.fr       */
+/*   Created: 2022/12/16 15:34:56 by aaugu             #+#    #+#             */
+/*   Updated: 2022/12/16 16:45:23 by aaugu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-/*
-The printf() function write output to stdout, the standard output stream.
-Returns the number of characters printed.
-*/
-
-int	parse_input(const char *input, va_list args);
-int	decode(const char *input, va_list args, int i);
+int	ft_parse_input(const char *input, va_list args);
+int	ft_parse_flags(char c, va_list args);
 
 int	ft_printf(const char *input, ...)
 {
@@ -28,38 +23,59 @@ int	ft_printf(const char *input, ...)
 	if (!input)
 		return (0);
 	va_start(args, input);
-	count = parse_input(input, args);
+	count = ft_parse_input(input, args);
 	va_end(args);
 	return (count);
 }
 
-int	parse_input(const char *input, va_list args)
+int	ft_parse_input(const char *input, va_list args)
 {
-	int			count;
-	static int	i;
+	int	count;
+	int	i;
 
 	count = 0;
+	i = 0;
 	while (input[i])
 	{
 		if (input[i] == '%')
-			count += decode(input, args, i);
-		else
 		{
-			count += print_c(input[i]);
+			count += ft_parse_flags(input[i + 1], args);
 			i++;
 		}
+		else
+			count += ft_print_c(input[i]);
+		i++;
 	}
 	return (count);
 }
 
-int	decode(const char *input, va_list args, int i)
+int	ft_parse_flags(char c, va_list args)
 {
-	t_specs	specs;
-	int		count;
+	int	count;
 
 	count = 0;
-	specs = init_specifiers();
-	if (state_machine(input, i, specs))
-		count = print_result(specs, args);
+	if (c == 'c')
+		count = ft_print_c(va_arg(args, int));
+	else if (c == 's')
+		count = ft_print_s(va_arg(args, char *));
+	else if (c == 'p')
+		count = ft_print_p((long unsigned int)va_arg(args, void *));
+	else if (c == 'd' || c == 'i')
+		count = ft_print_int((long int)va_arg(args, int));
+	else if (c == 'u')
+		count = ft_print_uns_int((long unsigned int)va_arg(args, unsigned int));
+	else if (c == 'x' || c == 'X')
+		count += ft_print_x(c, (long unsigned int)va_arg(args, unsigned int));
+	else if (c == '%')
+		count = ft_print_c('%');
 	return (count);
 }
+/*
+int	main(void)
+{
+	ft_printf("%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %c%%", 'A', "42", 42, 42 ,42 , 42, 42, 'B', "-42", -42, -42 ,-42 ,-42, 42, 'C', "0", 0, 0 ,0 ,0, 42, 0);
+	printf("%c", '\n');
+	printf("%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %c%%", 'A', "42", 42, 42 ,42 , 42, 42, 'B', "-42", -42, -42 ,-42 ,-42, 42, 'C', "0", 0, 0 ,0 ,0, 42, 0);
+	return (0);
+}
+*/

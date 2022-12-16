@@ -3,11 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   print_c.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaugu <marvin@42lausanne.ch>               +#+  +:+       +#+        */
+/*   By: aaugu <aaugu@student.42lausanne.ch>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/12 09:45:36 by aaugu             #+#    #+#             */
-/*   Updated: 2022/12/12 09:45:38 by aaugu            ###   ########.fr       */
+/*   Created: 2022/12/16 15:35:23 by aaugu             #+#    #+#             */
+/*   Updated: 2022/12/16 15:35:25 by aaugu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+int	ft_print_c(int c)
+{
+	int	count;
+
+	count = (int)write(1, &c, 1);
+	return (count);
+}

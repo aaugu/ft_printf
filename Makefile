@@ -6,13 +6,12 @@
 #    By: aaugu <marvin@42lausanne.ch>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/10 12:56:54 by aaugu             #+#    #+#              #
-#    Updated: 2022/12/12 12:06:54 by aaugu            ###   ########.fr        #
+#    Updated: 2022/12/16 15:08:23 by aaugu            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
-
-SRCS = ft_printf.c ft_printf_utils.c
+SRCS = ft_printf.c print_c.c print_s.c print_p.c print_int.c print_u.c print_x.c
 
 OBJ_DIR = objs
 OBJS = ${SRCS:%.c=${OBJ_DIR}/%.o}
@@ -33,7 +32,7 @@ all:			${NAME}
 bonus:			all
 
 ${NAME}:		$(LIBFT) ${OBJ_DIR} $(OBJS)
-				cp	$(LIBFT) $(NAME)
+				cp $(LIBFT) $(NAME)
 				$(AR) $(NAME) $(OBJS)
 
 ${LIBFT}:

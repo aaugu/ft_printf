@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaugu <marvin@42lausanne.ch>               +#+  +:+       +#+        */
+/*   By: aaugu <aaugu@student.42lausanne.ch>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/08 10:32:03 by aaugu             #+#    #+#             */
-/*   Updated: 2022/12/13 16:24:02 by aaugu            ###   ########.fr       */
+/*   Created: 2022/12/16 15:35:18 by aaugu             #+#    #+#             */
+/*   Updated: 2022/12/16 16:43:49 by aaugu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,47 +14,29 @@
 # define FT_PRINTF_H
 
 # include "libft/libft.h"
-
-typedef int	t_bool;
-
-/* ---------------	SPECIFIERS	--------------- */
-typedef struct s_specs
-{
-	char	format;
-	int		precision_width;
-	int		min_width;
-	t_bool	pad_left;
-	t_bool	zero;
-	t_bool	hash;
-	t_bool	space;
-	t_bool	plus;
-}				t_specs;
-
-t_specs	ft_init_specifiers(void);
+# include <stdarg.h>
 
 /* ---------------	PRINTF	--------------- */
-int		ft_printf(const char *input, ...);
-
-/* ---------------	PRINTF UTILS	--------------- */
-int		ft_is_flag(char c);
-int		ft_is_format(char c);
+int	ft_printf(const char *input, ...);
+int	ft_parse_input(const char *input, va_list args);
+int	ft_parse_flags(char c, va_list args);
 
 /* ---------------	`C`HAR	--------------- */
-int		print_c(char c);
+int	ft_print_c(int c);
 
 /* ---------------	`S`TRING	--------------- */
-int		print_s(char *str);
+int	ft_print_s(char *str);
 
 /* ---------------	`P`OINTER	--------------- */
-int		print_p(void *ptr);
+int	ft_print_p(long unsigned int n);
 
 /* ---------------	`D`ECIMAL & `I`NTEGER	--------------- */
-int		print_d(void);
+int	ft_print_int(long int n);
 
 /* ---------------	`U`NSIGNED DECIMAL	--------------- */
-int		print_u(void);
+int	ft_print_uns_int(long unsigned int n);
 
 /* ---------------	HE`X`ADECIMAL	--------------- */
-int		print_x(void);
+int	ft_print_x(char c, long unsigned int n);
 
 #endif
