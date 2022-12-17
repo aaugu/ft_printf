@@ -6,7 +6,7 @@
 /*   By: aaugu <aaugu@student.42lausanne.ch>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 15:34:56 by aaugu             #+#    #+#             */
-/*   Updated: 2022/12/17 13:12:34 by aaugu            ###   ########.fr       */
+/*   Updated: 2022/12/17 20:38:50 by aaugu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,8 @@ int	ft_parse_flags(char c, va_list args)
 
 // int main(void)
 // {
-// 	ft_printf("%d\n", 4294967295);
-// 	printf("%d\n", 4294967295);
+// 	int	count = 0;
+// 	count = ft_printf(" %d ", 10);
+// 	printf(" %d ", count);
 // 	return (0);
 // }

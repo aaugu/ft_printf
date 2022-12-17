@@ -6,7 +6,7 @@
 /*   By: aaugu <aaugu@student.42lausanne.ch>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 15:35:32 by aaugu             #+#    #+#             */
-/*   Updated: 2022/12/17 13:13:03 by aaugu            ###   ########.fr       */
+/*   Updated: 2022/12/17 20:41:12 by aaugu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,17 +20,19 @@ int	ft_print_int(int n)
 	if (n == -2147483648)
 	{
 		count += ft_print_s("-2147483648");
+		return (count);
 	}
-	if (n < 0 && n != -2147483648)
+	if (n < 0)
 	{
 		count += ft_print_c('-');
 		n = -n;
 	}
 	if (n >= 10)
 	{
-		ft_print_int(n / 10);
+		count += ft_print_int(n / 10);
+		count += ft_print_int(n % 10);
 	}
-	n = n % 10;
-	count += ft_print_c(n + 48);
+	else if (n < 10)
+		count += ft_print_c(n + 48);
 	return (count);
 }
