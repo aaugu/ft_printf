@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaugu <marvin@42lausanne.ch>               +#+  +:+       +#+        */
+/*   By: aaugu <aaugu@student.42lausanne.ch>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 12:02:33 by aaugu             #+#    #+#             */
-/*   Updated: 2022/11/08 16:05:56 by aaugu            ###   ########.fr       */
+/*   Updated: 2022/12/17 17:53:47 by aaugu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 The strlcat() function concatenate strings with the same input parameters and
 output result as snprintf(3). It is designed to be safer, more consistent, and
 less error prone replacements for the easily misused function strncat(3).
-Strlcat() take the full size of the destination buffer and guarantee 
+Strlcat() take the full size of the destination buffer and guarantee
 NUL-termination if there is room. Note that room for the NUL should be included
 in dstsize.
 The strlcat() function appends string src to the end of dst. It will append at

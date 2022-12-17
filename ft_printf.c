@@ -6,7 +6,7 @@
 /*   By: aaugu <aaugu@student.42lausanne.ch>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 15:34:56 by aaugu             #+#    #+#             */
-/*   Updated: 2022/12/16 16:45:23 by aaugu            ###   ########.fr       */
+/*   Updated: 2022/12/17 13:12:34 by aaugu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int	ft_parse_flags(char c, va_list args)
 	else if (c == 'p')
 		count = ft_print_p((long unsigned int)va_arg(args, void *));
 	else if (c == 'd' || c == 'i')
-		count = ft_print_int((long int)va_arg(args, int));
+		count = ft_print_int(va_arg(args, int));
 	else if (c == 'u')
 		count = ft_print_uns_int((long unsigned int)va_arg(args, unsigned int));
 	else if (c == 'x' || c == 'X')
@@ -70,12 +70,10 @@ int	ft_parse_flags(char c, va_list args)
 		count = ft_print_c('%');
 	return (count);
 }
-/*
-int	main(void)
-{
-	ft_printf("%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %c%%", 'A', "42", 42, 42 ,42 , 42, 42, 'B', "-42", -42, -42 ,-42 ,-42, 42, 'C', "0", 0, 0 ,0 ,0, 42, 0);
-	printf("%c", '\n');
-	printf("%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %c%%", 'A', "42", 42, 42 ,42 , 42, 42, 'B', "-42", -42, -42 ,-42 ,-42, 42, 'C', "0", 0, 0 ,0 ,0, 42, 0);
-	return (0);
-}
-*/
+
+// int main(void)
+// {
+// 	ft_printf("%d\n", 4294967295);
+// 	printf("%d\n", 4294967295);
+// 	return (0);
+// }

@@ -6,7 +6,7 @@
 /*   By: aaugu <aaugu@student.42lausanne.ch>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/16 15:35:18 by aaugu             #+#    #+#             */
-/*   Updated: 2022/12/16 16:43:49 by aaugu            ###   ########.fr       */
+/*   Updated: 2022/12/17 13:16:07 by aaugu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,10 @@ int	ft_print_s(char *str);
 int	ft_print_p(long unsigned int n);
 
 /* ---------------	`D`ECIMAL & `I`NTEGER	--------------- */
-int	ft_print_int(long int n);
+int	ft_print_int(int n);
 
 /* ---------------	`U`NSIGNED DECIMAL	--------------- */
-int	ft_print_uns_int(long unsigned int n);
+int	ft_print_uns_int(unsigned int n);
 
 /* ---------------	HE`X`ADECIMAL	--------------- */
 int	ft_print_x(char c, long unsigned int n);

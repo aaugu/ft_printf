@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaugu <marvin@42lausanne.ch>               +#+  +:+       +#+        */
+/*   By: aaugu <aaugu@student.42lausanne.ch>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 10:19:34 by aaugu             #+#    #+#             */
-/*   Updated: 2022/11/08 16:21:37 by aaugu            ###   ########.fr       */
+/*   Updated: 2022/12/17 17:53:52 by aaugu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 /*
 The strrchr() function is identical to strchr(), except it locates the last
-occurrence of c. Returns a pointer to the located character, or NULL if the 
+occurrence of c. Returns a pointer to the located character, or NULL if the
 character does not appear in the string.
 */
 

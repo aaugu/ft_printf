@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaugu <marvin@42lausanne.ch>               +#+  +:+       +#+        */
+/*   By: aaugu <aaugu@student.42lausanne.ch>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 13:42:35 by aaugu             #+#    #+#             */
-/*   Updated: 2022/11/08 17:53:23 by aaugu            ###   ########.fr       */
+/*   Updated: 2022/12/17 17:53:53 by aaugu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-Allocates (with malloc(3)) and returns a copy of ’s1’ with the characters 
+Allocates (with malloc(3)) and returns a copy of ’s1’ with the characters
 specified in ’set’ removed from the beginning and the end of the string, NULL
 if allocation fails.
 

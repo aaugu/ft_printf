@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaugu <marvin@42lausanne.ch>               +#+  +:+       +#+        */
+/*   By: aaugu <aaugu@student.42lausanne.ch>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 13:00:32 by aaugu             #+#    #+#             */
-/*   Updated: 2022/11/08 18:04:47 by aaugu            ###   ########.fr       */
+/*   Updated: 2022/12/17 17:53:33 by aaugu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-Allocates (with malloc(3)) and returns a string representing the integer 
-received as an argument, or NULL if allocation fails. Negative numbers must be 
+Allocates (with malloc(3)) and returns a string representing the integer
+received as an argument, or NULL if allocation fails. Negative numbers must be
 handled.
 
 n: the integer to convert.

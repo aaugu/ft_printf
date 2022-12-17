@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaugu <marvin@42lausanne.ch>               +#+  +:+       +#+        */
+/*   By: aaugu <aaugu@student.42lausanne.ch>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 12:03:22 by aaugu             #+#    #+#             */
-/*   Updated: 2022/11/07 16:25:30 by aaugu            ###   ########.fr       */
+/*   Updated: 2022/12/17 17:53:52 by aaugu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 The strncmp() function lexicographically compare the null-terminated strings s1
 and s2 not more than n characters. Because strncmp() is designed for comparing
 strings rather than binary data, characters that appear after a `\0' character
-are not compared. Returns an integer greater than, equal to, or less than 0, 
+are not compared. Returns an integer greater than, equal to, or less than 0,
 according as the string s1 is greater than, equal to, or less than the string
 s2. The comparison is done using unsigned characters, so that `\200' is greater
 than `\0'.

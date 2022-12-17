@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaugu <marvin@42lausanne.ch>               +#+  +:+       +#+        */
+/*   By: aaugu <aaugu@student.42lausanne.ch>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 12:02:15 by aaugu             #+#    #+#             */
-/*   Updated: 2022/11/08 11:47:34 by aaugu            ###   ########.fr       */
+/*   Updated: 2022/12/17 17:53:32 by aaugu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 /*
 The isprint() function tests for any printing character, including space (` ').
 The value of the argument must be representable as an unsigned char or the value
-of EOF. 
+of EOF.
 Returns zero if the character tests false and returns non-zero if the character
 tests true.
 */

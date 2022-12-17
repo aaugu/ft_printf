@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaugu <marvin@42lausanne.ch>               +#+  +:+       +#+        */
+/*   By: aaugu <aaugu@student.42lausanne.ch>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 12:03:25 by aaugu             #+#    #+#             */
-/*   Updated: 2022/11/08 16:54:17 by aaugu            ###   ########.fr       */
+/*   Updated: 2022/12/17 17:53:52 by aaugu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ searched. Characters that appear after a `\0' character are not searched. Since
 the strnstr() function is a FreeBSD specific API, it should only be used when
 portability is not a concern.
 If needle is an empty string, haystack is returned; if needle occurs nowhere in
-haystack, NULL is returned; otherwise a pointer to the first character of the 
+haystack, NULL is returned; otherwise a pointer to the first character of the
 first occurrence of needle is returned.
 */
 

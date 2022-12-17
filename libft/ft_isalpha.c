@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaugu <marvin@42lausanne.ch>               +#+  +:+       +#+        */
+/*   By: aaugu <aaugu@student.42lausanne.ch>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 12:02:07 by aaugu             #+#    #+#             */
-/*   Updated: 2022/11/08 11:46:08 by aaugu            ###   ########.fr       */
+/*   Updated: 2022/12/17 17:53:26 by aaugu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-The isalpha() function tests for any character for which isupper(3) or 
-islower(3) is true. The value of the argument must be representable as an 
-unsigned char or the value of EOF. 
-Returns zero if the character tests false and returns non-zero if the character 
+The isalpha() function tests for any character for which isupper(3) or
+islower(3) is true. The value of the argument must be representable as an
+unsigned char or the value of EOF.
+Returns zero if the character tests false and returns non-zero if the character
 tests true.
 */
 

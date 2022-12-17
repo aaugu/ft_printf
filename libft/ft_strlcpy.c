@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaugu <marvin@42lausanne.ch>               +#+  +:+       +#+        */
+/*   By: aaugu <aaugu@student.42lausanne.ch>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 12:03:16 by aaugu             #+#    #+#             */
-/*   Updated: 2022/11/08 15:30:07 by aaugu            ###   ########.fr       */
+/*   Updated: 2022/12/17 17:53:47 by aaugu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 /*
 The strlcpy() function copy strings with the same input parameters and output
-result as snprintf(3). It is designed to be safer, more consistent, and less 
+result as snprintf(3). It is designed to be safer, more consistent, and less
 error prone replacements for the easily misused function strncpy(3).
-Strlcpy() take the full size of the destination buffer and guarantee 
+Strlcpy() take the full size of the destination buffer and guarantee
 NUL-termination if there is room. Note that room for the NUL should be included
 in dstsize.
 Strlcpy() copies up to dstsize - 1 characters from the string src to dst,
